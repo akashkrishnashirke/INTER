@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%extends 'account/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALL MEMBERS</title>
+</head>
+{% block base_block%}
+<body>
+<h1>ACCOUNT HOLDERS</h1>
+{% if mem %}
+<table>
+    <thead>
+    <th>ID</th>
+    <th>F_NAME</th>
+    <th>M_NAME</th>
+    <th>DATE_OF_BIRTH</th>
+    <th>AGE</th>
+    <th>EMAIL</th>
+    <th>ADHARCARD</th>
+    </thead>
+    {% for i in mem %}
+    <tr>
+        <td>{{i.ID}}</td>
+        <td>{{i.First_Name}}</td>
+        <td>{{i.Middle_Name}}</td>
+        <td>{{i.Last_name}}</td>
+        <td>{{i.Date_of_Birth}}</td>
+        <td>{{i.Age}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.AdharCard}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%else%}
+<h1>no data found</h1>
+{%endif%}
+</body>
+{% endblock%}
+</html>

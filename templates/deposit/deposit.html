@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'deposit/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deposit</title>
+</head>
+{% block base_block%}
+<body>
+<h1 align="center">Welcom To Depaosit Page</h1>
+<hr>
+<h1 align="center">Employee form</h1>
+<div class="container" align="center">
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" class="btn btn-primary" name="" value="submit">
+    </form>
+</div>
+</body>
+{% endblock%}
+</html>
